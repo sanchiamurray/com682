@@ -11,6 +11,16 @@
       <script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
 
       <script type="text/javascript" src="JS/app.js"></script>
+      
+      <script type="text/javascript">
+        function goToNewPage()
+        {
+            var url = document.getElementById('list').value;
+            if(url != 'none') {
+                window.location = url;
+            }
+        }
+    </script>
 
   </head>
   
@@ -23,39 +33,26 @@
             <div class="col-2"  ></div>
 
             <div class="col-8" style="text-align: center;">
-              <h3>Image Share</h3>
+              <h3>Video Exploerer</h3>
             </div>
 
             <div class="col-2"  ></div>
         </div>
 
-        <div class="dropdown">
-          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">User Accessibilty
-          <span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <li><a href="#">Basic User</a></li>
-            <li><a href="#">Creator</a></li>
-          </ul>
-        </div>
+        <form>
+          <label>Switch Accessibilty</label><br>
+          <select name="list" id="list" accesskey="target">
+              <option value = "users.html">User</option>
+              <option value="index.html">Creator</option>
+          </select>
+          <input type=button value="Login" onclick="goToNewPage()" />
+          </form>
 
         <!--New Asset Box-->
         <div class="row align-items-start">
             <div class="col-2"  ></div>
 
-            <div class="col-8" style="text-align: left;border-bottom:1px solid #222222;">
-              <p>Add Image</p>
-
-              <form style="font-size: 10pt;" id="newAssetForm">
-
-                <div class="mb-3">
-                  <label for="UpFile" class="form-label">File to Upload</label>
-                  <input type="file" class="form-control" id="UpFile">
-                </div>
-            
-                <!--<button type="button" id="subNewForm" class="btn btn-primary">Submit</button> <br/><br/>-->
-                
-              </form>
-            </div>
+         
 
             <div class="col-2"  ></div>
         </div>
@@ -63,17 +60,20 @@
         <!-- view Asset Area-->
         <div class="row align-items-start">
             <div class="col-2"  ></div>
+            
 
             <div class="col-8" style="text-align: left;" >
-              <div style="padding:5px;">
-                <button  id = "retImages" type="button" class="btn btn-primary">View Images</button>
-              </div>
-
-              <div id="ImageList">
-
-                <h4>Please click the view Images button if you wish to view images on the system.</h4>
+              <div style="text-align:center; padding:5px;">
+                <h4>Please click "View Video Clips" button if you wish to watch the videos on the system.</h4>
+                <button  id = "retImages" type="button" class="btn btn-primary">View Video Clips</button>
 
               </div>
+
+              <!-- <div id="ImageList">
+
+                <h4>Please click "View Video Clips" button if you wish to watch the videos on the system.</h4>
+
+              </div> -->
             </div>
 
             <div class="col-2"  ></div>

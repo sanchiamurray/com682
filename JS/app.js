@@ -74,13 +74,14 @@ $.getJSON(RAI, function( data ) {
 
     items.push( "<hr />");
     //items.push("<video width='320' height='240'controls/>")
-    items.push("<video src='"+BLOB_ACCOUNT + val["filePath"] +"' width='400' autoplay muted controls> </video>")
-    items.push("Video title" + val["Title"] + "<br/>");
-    items.push("Producer: " + val["Producer"] + "(Publisher: " + val["Publisher"]+")</br>");
+    items.push("<video src='"+BLOB_ACCOUNT + val["filePath"] +"' width='400' autoplay muted controls> </video> ")
+    
+    items.push("<br/>"+"Video title: " + val["Title"] + "<br/>");
+    items.push("Producer: " + val["Producer"] + " (Publisher: " + val["Publisher"]+")</br>");
     items.push( "Age : " + val["Age"] + "<br />");
     items.push( "Genre : " + val["Genre"] + "<br />");
-    items.push( "File : " + val["fileName"] + "<br />");
-    items.push( "Uploaded by: " + val["userName"] + " (user id: "+val["userID"]+")<br />");
+  //  items.push( "File : " + val["fileName"] + "<br />");
+    //items.push( "Uploaded by: " + val["userName"] + " (user id: "+val["userID"]+")<br />");
     items.push( "<hr />");
   });
 
