@@ -20,7 +20,29 @@
                 window.location = url;
             }
         }
+        function pr() {
+            document.getElementById("result").innerHTML = document.getElementById('fname').value + " " + document.getElementById('mname').value + " " + document.getElementById('lname').value;
+          }
+          function pr2() {
+            document.getElementById("result2").innerHTML = document.getElementById('fname2').value + " " + document.getElementById('mname2').value + " " + document.getElementById('lname2').value;
+          }
     </script>
+
+    <script>
+      function generateRow() {
+      
+      var d=document.getElementById("div");
+      d.innerHTML+="<p><input type='text' name='food'>";
+      
+      }
+
+      </script>
+
+<script type="text/javascript">
+  function showForm() {
+      document.getElementById('formElement').style.display = 'block';
+  }
+</script>
 
   </head>
   
@@ -33,7 +55,7 @@
             <div class="col-2"  ></div>
 
             <div class="col-8" style="text-align: center;">
-              <h3>Video Exploerer</h3>
+              <h3>Video Explorer</h3>
             </div>
 
             <div class="col-2"  ></div>
@@ -64,16 +86,45 @@
 
             <div class="col-8" style="text-align: left;" >
               <div style="text-align:center; padding:5px;">
-                <h4>Please click "View Video Clips" button if you wish to watch the videos on the system.</h4>
+                
                 <button  id = "retImages" type="button" class="btn btn-primary">View Video Clips</button>
 
               </div>
 
-              <!-- <div id="ImageList">
+              <div style="text-align:center;" id="ImageList">
 
                 <h4>Please click "View Video Clips" button if you wish to watch the videos on the system.</h4>
+                <h5>After viewing, you can leave a review within the "WRITE A REVIEW" section below.</h5>
 
-              </div> -->
+              </div>
+            </div>
+            <br />​<hr />​​​​​​​​​​​​​​​​​​​<br />
+            <div style="text-align:center;">
+            <form id = 'form1 'action="PayslipServlet" method="get">
+              <h4> WRITE A REVIEW </h4>
+              Video Title :    <input type="text" name="lname" id="lname"><br/>
+              Comment:   <input type="text" name="fname" id="fname"><br/>
+              Star Rating:  <input type="text" name="mname" id ="mname"><br/>
+              Overall Review:              <span id="result"></span>
+              <br>
+              <input type="button" value="Submit Review" onClick="pr()">
+              <div id= "div" ></div>
+              <br>
+              </form>
+            </div>
+
+            <div style="text-align:center;">
+            <p><input type="button" value="Add A New Review" onclick="showForm()"/></p>
+            <form id="formElement" style="display: none;" action="PayslipServlet" method="get">
+              Video Title :    <input type="text" name="lname" id="lname2"><br/>
+              Comment:   <input type="text" name="fname" id="fname2"><br/>
+              Star Rating:  <input type="text" name="mname" id ="mname2"><br/>
+              Overall Review: <span id="result2"></span>
+              <br>
+              <input type="button" value="Submit Review" onClick="pr2()">
+              <div id= "div" ></div>
+              <br>
+              </form>
             </div>
 
             <div class="col-2"  ></div>

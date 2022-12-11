@@ -83,10 +83,13 @@ $.getJSON(RAI, function( data ) {
   //  items.push( "File : " + val["fileName"] + "<br />");
     //items.push( "Uploaded by: " + val["userName"] + " (user id: "+val["userID"]+")<br />");
     items.push( "<hr />");
+  
   });
 
   //Clear the assetlist div
   $('#ImageList').empty();
+
+  
 
   //Append the contents of the items array to the ImageList Div
   $( "<ul/>", {
@@ -95,4 +98,5 @@ $.getJSON(RAI, function( data ) {
     }).appendTo( "#ImageList" );
   });
 }
+
 
