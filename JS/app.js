@@ -99,5 +99,3 @@ $.getJSON(RAI, function( data ) {
   });
 }
 
-
-//save me!
