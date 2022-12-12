@@ -78,7 +78,7 @@ $.getJSON(RAI, function( data ) {
     
     items.push("<br/>"+"Video title: " + val["Title"] + "<br/>");
     items.push("Producer: " + val["Producer"] + " (Publisher: " + val["Publisher"]+")</br>");
-    items.push( "Age : " + val["Age"] + "<br />");
+    //items.push( "Age : " + val["Age"] + "<br />");
     items.push( "Genre : " + val["Genre"] + "<br />");
   //  items.push( "File : " + val["fileName"] + "<br />");
     //items.push( "Uploaded by: " + val["userName"] + " (user id: "+val["userID"]+")<br />");
