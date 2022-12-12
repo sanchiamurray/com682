@@ -35,7 +35,7 @@ function submitNewAsset(){
    submitData.append('Producer',$('#Producer').val());
    submitData.append('Publisher', $('#Publisher').val());
    submitData.append('Genre',$('#Genre').val());
-   submitData.append('Age', $('Age').val())
+  // submitData.append('Age', $('Age').val())
    //submitData.append('FileName', $('#FileName').val());
    //submitData.append('userID', $('#userID').val());
    //submitData.append('userName', $('#userName').val());
@@ -100,3 +100,4 @@ $.getJSON(RAI, function( data ) {
 }
 
 
+//save me!
